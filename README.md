@@ -1,1 +1,1 @@
-Example crypto app built with SwiftUI following Swiftful Thinking's tutorial.
+Example crypto tracker app built with SwiftUI following Swiftful Thinking's tutorial.
