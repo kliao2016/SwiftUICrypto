@@ -29,12 +29,14 @@ struct CircleButton: View {
 #if DEBUG
 struct CircleButton_Previews: PreviewProvider {
     static var previews: some View {
-        CircleButton(iconName: "info")
-            .previewLayout(.sizeThatFits)
-        
-        CircleButton(iconName: "plus")
-            .previewLayout(.sizeThatFits)
-            .colorScheme(.dark)
+        Group {
+            CircleButton(iconName: "info")
+                .previewLayout(.sizeThatFits)
+            
+            CircleButton(iconName: "plus")
+                .previewLayout(.sizeThatFits)
+                .preferredColorScheme(.dark)
+        }
     }
 }
 #endif
