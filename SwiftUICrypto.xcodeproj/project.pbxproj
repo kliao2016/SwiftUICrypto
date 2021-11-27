@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		105D9A182751C61A00AE5423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105D9A172751C61A00AE5423 /* Assets.xcassets */; };
 		105D9A1A2751C78500AE5423 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D9A192751C78500AE5423 /* HomeViewModel.swift */; };
+		105D9A1D2751F24400AE5423 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D9A1C2751F24400AE5423 /* CoinDataService.swift */; };
+		105D9A202751F7B300AE5423 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D9A1F2751F7B200AE5423 /* NetworkManager.swift */; };
 		1076068C274709520018D58B /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1076068B274709520018D58B /* Coin.swift */; };
 		10A8D772274DE724005CAC07 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A8D771274DE724005CAC07 /* CoinRowView.swift */; };
 		10A8D774274DE767005CAC07 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A8D773274DE767005CAC07 /* PreviewProvider.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		105D9A172751C61A00AE5423 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		105D9A192751C78500AE5423 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		105D9A1C2751F24400AE5423 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		105D9A1F2751F7B200AE5423 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1076068B274709520018D58B /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		10A8D771274DE724005CAC07 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		10A8D773274DE767005CAC07 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
@@ -49,6 +53,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		105D9A1B2751F21000AE5423 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				105D9A1E2751F7A500AE5423 /* Utilities */,
+				105D9A1C2751F24400AE5423 /* CoinDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		105D9A1E2751F7A500AE5423 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				105D9A1F2751F7B200AE5423 /* NetworkManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		1076068A274708F40018D58B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +99,7 @@
 			children = (
 				10EF93EC26F989BE00A21986 /* SwiftUICryptoApp.swift */,
 				10EF93FD26F98B8C00A21986 /* Extensions */,
+				105D9A1B2751F21000AE5423 /* Services */,
 				1076068A274708F40018D58B /* Models */,
 				10EF940126F98D9200A21986 /* Core */,
 				105D9A172751C61A00AE5423 /* Assets.xcassets */,
@@ -117,8 +139,8 @@
 		10EF940226F98D9F00A21986 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				10EF940426F98DAB00A21986 /* Views */,
 				10EF940326F98DA400A21986 /* ViewModels */,
+				10EF940426F98DAB00A21986 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -235,7 +257,9 @@
 				10EF93ED26F989BE00A21986 /* SwiftUICryptoApp.swift in Sources */,
 				10A8D772274DE724005CAC07 /* CoinRowView.swift in Sources */,
 				10A8D774274DE767005CAC07 /* PreviewProvider.swift in Sources */,
+				105D9A202751F7B300AE5423 /* NetworkManager.swift in Sources */,
 				10EF93FF26F98BB400A21986 /* Color+Theming.swift in Sources */,
+				105D9A1D2751F24400AE5423 /* CoinDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
