@@ -1,5 +1,5 @@
 //
-//  Coin+PreviewProvider.swift
+//  PreviewProvider.swift
 //  SwiftUICrypto
 //
 //  Created by Kevin Liao on 11/23/21.
@@ -18,6 +18,8 @@ class DeveloperPreview {
     static let shared = DeveloperPreview()
     
     private init() {}
+    
+    let homeVM = HomeViewModel()
     
     let coin = Coin(
        id: "bitcoin",
