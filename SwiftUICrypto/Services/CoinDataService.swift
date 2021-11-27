@@ -13,10 +13,10 @@ final class CoinDataService {
     private var coinSubscription: AnyCancellable?
     
     init() {
-        getCoins()
+        loadCoins()
     }
     
-    private func getCoins() {
+    private func loadCoins() {
         guard let url = URL(string: ServiceUrls.coinGeckoMarketApi) else { return }
         
         coinSubscription = NetworkManager.download(url: url)
