@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
-    @State private var showPortfolio: Bool = true
+    @State private var showPortfolio: Bool = false
     
     var body: some View {
         ZStack {
@@ -19,15 +19,19 @@ struct HomeView: View {
             // Content layer
             VStack {
                 homeHeader
+                HomeStatsView(showPortfolio: $showPortfolio)
+                    .environmentObject(vm)
                 SearchBarView(searchText: $vm.searchText)
                 listHeaders
+                
+                if !showPortfolio {
+                    allCoinsList
+                        .transition(.move(edge: .leading)) // Nice slide in animation
+                }
                 
                 if showPortfolio {
                     portfolioCoinsList
                         .transition(.move(edge: .trailing)) // Nice slide in animation
-                } else {
-                    allCoinsList
-                        .transition(.move(edge: .leading)) // Nice slide in animation
                 }
                 
                 Spacer(minLength: 0)
